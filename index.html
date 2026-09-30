@@ -1,0 +1,484 @@
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<style>
+    body {
+        font-family: "Aptos", "Calibri", "Helvetica", "Arial", sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .resume-container {
+        max-width: 1000px;
+        margin: 25px auto;
+        padding: 35px 45px;
+        background-color: white;
+        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .backColer {
+        background-color: lightgray;
+    }
+
+    .sectionFont {
+        color: teal;
+    }
+
+    .resumeSubtitle {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .no-bullets {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .no-bullets li {
+            margin-bottom: 4px;
+        }
+
+    .experienceTitleAndDate {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .experienceItems {
+        padding-left: 1.25rem;
+        margin-top: 0.35rem;
+        margin-bottom: 0;
+    }
+
+        .experienceItems li {
+            margin-bottom: 4px;
+        }
+
+    .print-button-container {
+        text-align: right;
+        margin-bottom: 15px;
+    }
+
+    @media print {
+
+        @page {
+            size: Letter;
+            margin: 0.55in 0.60in;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        body {
+            font-size: 10.5pt;
+            line-height: 1.25;
+            color: black;
+        }
+
+        .resume-container {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+
+        .no-print {
+            display: none !important;
+        }
+
+        .resume-section-title {
+            break-after: avoid-page;
+            page-break-after: avoid;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .experience-header {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            break-after: avoid-page;
+            page-break-after: avoid;
+        }
+
+        .experienceItems li,
+        .no-bullets li,
+        .education-item {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        p {
+            orphans: 3;
+            widows: 3;
+        }
+
+        li {
+            orphans: 2;
+            widows: 2;
+        }
+
+        a,
+        a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+</style>
+
+<div class="resume-container">
+<!--
+    <div class="print-button-container no-print">
+        <button type="button"
+                class="btn btn-dark"
+                onclick="exportResumePdf()">
+            Save Resume as PDF
+        </button>
+    </div>
+-->
+    <div class="text-center">
+        <h1 class="display-4 backColer">Bill O'Dell</h1>
+    </div>
+
+    <div>
+        <strong>Rainbow, TX</strong>
+    </div>
+
+    <div>
+        <strong>
+            <a href="mailto:billodell2012@gmail.com">billodell2012@gmail.com</a>
+            &bull;
+            <a href="tel:+15555555555">254-396-7541</a>
+        </strong>
+    </div>
+
+    <hr />
+
+    <div class="text-center sectionFont backColer resume-section-title">
+        <strong>
+            Software Engineer &amp; Enterprise Solutions Architect
+        </strong>
+        <br />
+        <span class="resumeSubtitle">
+            Full-Stack Development &bull; Enterprise Integration &bull; Automation &bull; Oracle / .NET
+        </span>
+    </div>
+
+    <div>
+        <p>
+            Software engineer and system architect with 15+ years of experience designing,
+            developing, integrating, and supporting enterprise applications and business-critical
+            systems. Experienced in full-stack development, distributed system integration,
+            REST APIs, cloud application environments, relational databases, background processing,
+            and production operations. Proven track record of independently identifying complex
+            operational problems, defining scalable technical solutions, and delivering secure,
+            maintainable systems that replace manual processes, reduce vendor dependency, and
+            improve organizational efficiency. Strong cross-functional experience working with
+            business stakeholders, enterprise technology teams, and external vendors to move
+            solutions from concept through production.
+        </p>
+    </div>
+
+    <div class="text-center sectionFont backColer resume-section-title">
+        <strong>
+            Technical Skills
+        </strong>
+    </div>
+
+    <div>
+        <ul class="no-bullets">
+            <li>
+                <strong>Application Development</strong> —
+                C#, .NET 10, ASP.NET Core MVC, Razor, Vue 3, JavaScript,
+                HTML5, CSS, LINQ, AJAX, jQuery, Bootstrap, WebForms
+            </li>
+
+            <li>
+                <strong>Data &amp; Analytics</strong> —
+                Oracle, SQL, PL/SQL, SQL Server, operational analytics,
+                dashboard development, reporting, data validation, reconciliation
+            </li>
+
+            <li>
+                <strong>Integration &amp; Automation</strong> —
+                REST APIs, OData, web services, JSON, XML,
+                SAML/token-based authentication, background services,
+                scheduled processing, distributed systems integration,
+                enterprise integration
+            </li>
+
+            <li>
+                <strong>Cloud &amp; Infrastructure</strong> —
+                AWS, IIS, server configuration, application deployment,
+                distributed application environments
+            </li>
+
+            <li>
+                <strong>Tools &amp; Legacy Technologies</strong> —
+                Visual Studio, Postman, SVN, Oracle Reports,
+                Crystal Reports, Java, ColdFusion
+            </li>
+        </ul>
+    </div>
+
+    <div class="text-center sectionFont backColer mt-2 resume-section-title">
+        <strong>
+            Professional Experience
+        </strong>
+    </div>
+
+    <div class="experience-header mt-2">
+        <div class="experienceTitleAndDate">
+            <span>
+                <strong>Nuclear Security Database Administrator</strong>
+            </span>
+            <span>
+                <strong>March 2025 - Present</strong>
+            </span>
+        </div>
+
+        <div>
+            <strong>Vistra — Comanche Peak Nuclear Power Plant</strong>
+        </div>
+    </div>
+
+    <ul class="experienceItems">
+        <li>
+            Architect and deliver enterprise applications, integrations, and automation
+            solutions supporting nuclear security operations across multiple sites, owning
+            solutions from requirements and system design through development, deployment,
+            troubleshooting, and production support
+        </li>
+
+        <li>
+            Design distributed integration workflows connecting enterprise platforms including
+            Oracle, Workday, VNDLY, SAP SuccessFactors, NANTeL, PADS, vendor systems, and
+            internal .NET applications, using REST APIs, background services, scheduled
+            processing, and database-driven workflows
+        </li>
+
+        <li>
+            Lead modernization of operational processes by identifying manual, redundant, or
+            vendor-dependent workflows and replacing them with internally developed solutions
+            that improve reliability, reduce processing time, and give business teams greater
+            control over critical systems
+        </li>
+
+        <li>
+            Designed and developed a custom badging application that eliminated the need for an
+            approximately $45,000 vendor solution, integrating personnel data, access
+            information, badge hardware, photography, printer selection, and local workstation
+            services into a production-ready application
+        </li>
+
+        <li>
+            Automated training verification and authorization workflows for high-volume outage
+            in-processing, reducing approximately five minutes of manual review per individual
+            across 800+ personnel while integrating training records from multiple external
+            systems
+        </li>
+
+        <li>
+            Developed bidirectional HR and contractor integrations between enterprise systems,
+            automating personnel onboarding, validation, authorization status, and regulatory
+            eligibility data that previously required approximately 10 minutes of manual
+            processing per person during high-volume outage periods
+        </li>
+
+        <li>
+            Build and operate production services using C#, ASP.NET Core/.NET, Oracle,
+            REST APIs, Vue, background workers, structured logging, health monitoring,
+            authentication/authorization, and secure service-to-service integrations,
+            with emphasis on reliability, maintainability, and operational support
+        </li>
+
+        <li>
+            Provide technical leadership across organizational boundaries, working directly
+            with security operations, business stakeholders, enterprise IT, HR systems teams,
+            and external vendors to diagnose complex system issues, evaluate architectural
+            tradeoffs, define integration approaches, and deliver production solutions
+        </li>
+    </ul>
+
+    <div class="experience-header mt-3">
+        <div class="experienceTitleAndDate">
+            <span>
+                <strong>Developer IV</strong>
+            </span>
+            <span>
+                <strong>April 2020 - March 2025</strong>
+            </span>
+        </div>
+
+        <div>
+            <strong>Vistra — Comanche Peak Nuclear Power Plant</strong>
+        </div>
+    </div>
+
+    <ul class="experienceItems">
+        <li>
+            Continued enterprise application development and architecture responsibilities
+            after transitioning from the Accenture team to Vistra, supporting business-critical
+            systems at Comanche Peak
+        </li>
+
+        <li>
+            Architected, developed, and supported custom .NET and Oracle applications,
+            integrations, reporting solutions, and automated processes across site business
+            functions
+        </li>
+
+        <li>
+            Supported AWS cloud environments and application migration initiatives, helping
+            modernize hosting, deployment, and system architecture for enterprise applications
+        </li>
+
+        <li>
+            Modernized legacy applications and introduced self-service functionality and
+            workflow automation that reduced recurring manual effort and dependence on IT
+            support
+        </li>
+
+        <li>
+            Collaborated with business stakeholders, infrastructure teams, vendors, and
+            application owners to deliver reliable solutions while maintaining strong focus
+            on data integrity, quality assurance, and production support
+        </li>
+    </ul>
+
+    <div class="experience-header mt-3">
+        <div class="experienceTitleAndDate">
+            <span>
+                <strong>Business &amp; Integration Architecture Specialist</strong>
+            </span>
+            <span>
+                <strong>February 2016 - April 2020</strong>
+            </span>
+        </div>
+
+        <div>
+            <strong>Accenture — Comanche Peak Nuclear Power Plant</strong>
+        </div>
+    </div>
+
+    <ul class="experienceItems">
+        <li>
+            Led application and infrastructure migration efforts into AWS cloud environments
+            and helped establish cloud environments supporting new enterprise systems
+        </li>
+
+        <li>
+            Designed application and integration architectures in partnership with business
+            teams, infrastructure groups, and application stakeholders
+        </li>
+
+        <li>
+            Modernized and enhanced legacy applications across .NET and ColdFusion environments
+            while maintaining support for business-critical nuclear operations
+        </li>
+
+        <li>
+            Designed automated processes and self-service business applications that replaced
+            repetitive manual activities and reduced ongoing user and IT intervention
+        </li>
+
+        <li>
+            Collaborated directly with business stakeholders to understand operational
+            challenges and rapidly design and deliver technology solutions within demanding
+            timelines
+        </li>
+
+        <li>
+            Conducted training for business users and new IT team members to improve technology
+            adoption and knowledge transfer
+        </li>
+    </ul>
+
+    <div class="experience-header mt-3">
+        <div class="experienceTitleAndDate">
+            <span>
+                <strong>Application Analyst / Developer</strong>
+            </span>
+            <span>
+                <strong>September 2010 - February 2016</strong>
+            </span>
+        </div>
+
+        <div>
+            <strong>Capgemini — Comanche Peak Nuclear Power Plant</strong>
+        </div>
+    </div>
+
+    <ul class="experienceItems">
+        <li>
+            Developed, supported, and enhanced applications supporting nuclear-site and
+            enterprise business operations
+        </li>
+
+        <li>
+            Maintained system and data quality through analysis, validation, troubleshooting,
+            testing, and corrective development
+        </li>
+
+        <li>
+            Diagnosed and resolved application defects and implemented enhancements, patches,
+            and functionality improvements across business-critical systems
+        </li>
+
+        <li>
+            Analyzed legacy processes and designed replacement solutions that improved
+            maintainability, usability, and operational supportability
+        </li>
+
+        <li>
+            Partnered with users and technical teams to investigate operational issues,
+            determine root causes, and implement reliable long-term solutions
+        </li>
+    </ul>
+
+    <div class="text-center sectionFont backColer mt-3 resume-section-title">
+        <strong>
+            Education And Certifications
+        </strong>
+    </div>
+
+    <div class="text-center education-item">
+        <strong>Bachelor of Computer Information Systems</strong>,
+        Tarleton State University - Stephenville, 2004-2008
+    </div>
+
+    <div class="text-center education-item">
+        <strong>AWS Certified Cloud Practitioner</strong>
+    </div>
+
+    <div class="text-center education-item">
+        <strong>Agile Architecture, Design &amp; Collaboration</strong>
+    </div>
+
+    <div class="text-center education-item">
+        <strong>ITIL v3</strong>
+    </div>
+
+</div>
+
+<script>
+    function exportResumePdf() {
+        const originalTitle = document.title;
+
+        document.title = "Bill_ODell_Resume";
+
+        window.print();
+
+        setTimeout(function() {
+            document.title = originalTitle;
+        }, 1000);
+    }
+</script>
