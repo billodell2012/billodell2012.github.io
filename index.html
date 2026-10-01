@@ -424,6 +424,33 @@
                 min-height: auto;
             }
         }
+
+        .hero-photo img {
+            width: 155px;
+            height: 155px;
+            object-fit: cover;
+            object-position: center 25%;
+            border-radius: 18px;
+            border: 4px solid white;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-photo img {
+            width: 155px;
+            height: 155px;
+            object-fit: cover;
+            object-position: center 25%;
+            border-radius: 18px;
+            border: 4px solid white;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
     </style>
 </head>
 
@@ -449,44 +476,58 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-
-                <div class="eyebrow">
-                    Software Engineer & Enterprise Solutions Architect
+    
+            <div class="hero-grid">
+    
+                <div class="hero-content">
+    
+                    <div class="eyebrow">
+                        Software Engineer & Enterprise Solutions Architect
+                    </div>
+    
+                    <h1>
+                        I build systems that solve real operational problems.
+                    </h1>
+    
+                    <h2>
+                        Enterprise applications, integrations, automation and data solutions.
+                    </h2>
+    
+                    <p>
+                        Software engineer and system architect with 15+ years of experience
+                        designing and delivering business-critical applications, distributed
+                        integrations, automation, and data-driven solutions. I specialize in
+                        turning complex manual processes and disconnected enterprise systems
+                        into reliable, maintainable software.
+                    </p>
+    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="button button-primary">
+                            View Featured Projects
+                        </a>
+    
+                        <a href="resume.html"
+                           class="button button-secondary"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Resume
+                        </a>
+                    </div>
+    
+                    <div class="tech-line">
+                        C# &bull; .NET &bull; ASP.NET Core &bull; Oracle &bull; Vue &bull;
+                        REST APIs &bull; AWS &bull; Enterprise Integration
+                    </div>
+    
                 </div>
-
-                <h1>
-                    I build systems that solve real operational problems.
-                </h1>
-
-                <h2>
-                    Enterprise applications, integrations, automation and data solutions.
-                </h2>
-
-                <p>
-                    Software engineer and system architect with 15+ years of experience
-                    designing and delivering business-critical applications, distributed
-                    integrations, automation, and data-driven solutions. I specialize in
-                    turning complex manual processes and disconnected enterprise systems
-                    into reliable, maintainable software.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="button button-primary">
-                        View Featured Projects
-                    </a>
-
-                    <a href="resume.html" class="button button-secondary" target="_blank" rel="noopener noreferrer"> 
-                        View Resume
-                    </a>
+    
+                <div class="hero-photo">
+                    <img src="images/bill-headshot.jpg"
+                         alt="Bill O'Dell">
                 </div>
-
-                <div class="tech-line">
-                    C# &bull; .NET &bull; ASP.NET Core &bull; Oracle &bull; Vue &bull;
-                    REST APIs &bull; AWS &bull; Enterprise Integration
-                </div>
-
+    
             </div>
+    
         </div>
     </section>
 
