@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bill O'Dell | Software Engineer & Enterprise Solutions Architect</title>
+
+    <meta name="description"
+          content="Software Engineer and Enterprise Solutions Architect specializing in .NET, Oracle, enterprise integration, automation, APIs, and business-critical applications.">
+
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-dark: #0b5e58;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --background: #f8fafc;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --dark: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Aptos", "Calibri", "Helvetica", "Arial", sans-serif;
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-resume {
+            padding: 9px 16px;
+            border-radius: 7px;
+            background: var(--primary);
+            color: white !important;
+        }
+
+        .nav-resume:hover {
+            background: var(--primary-dark);
+        }
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 35%),
+                white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-size: .85rem;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(2.6rem, 6vw, 4.7rem);
+            line-height: 1.04;
+            letter-spacing: -.04em;
+            color: var(--dark);
+        }
+
+        .hero h2 {
+            margin: 22px 0 0;
+            font-size: clamp(1.25rem, 3vw, 1.8rem);
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin: 24px 0 0;
+            max-width: 760px;
+            font-size: 1.15rem;
+            color: #4b5563;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 34px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .15s ease;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .button-secondary {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: var(--dark);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .tech-line {
+            margin-top: 30px;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        .section-heading {
+            margin-bottom: 38px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: 2.1rem;
+            color: var(--dark);
+        }
+
+        .section-heading p {
+            margin: 8px 0 0;
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .capability {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 26px;
+        }
+
+        .capability h3 {
+            margin: 0 0 10px;
+            color: var(--dark);
+            font-size: 1.15rem;
+        }
+
+        .capability p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            min-height: 330px;
+            transition: .15s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.07);
+        }
+
+        .project-label {
+            color: var(--primary);
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-weight: 800;
+        }
+
+        .project-card h3 {
+            margin: 8px 0 10px;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        .project-tech {
+            font-size: .92rem;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .project-card p {
+            color: #4b5563;
+            margin: 0 0 18px;
+        }
+
+        .impact {
+            margin-top: auto;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+        }
+
+        .impact strong {
+            color: var(--primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .skill-group {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .skill-group h3 {
+            margin: 0 0 12px;
+            color: var(--dark);
+        }
+
+        .skill-group p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .timeline {
+            border-left: 3px solid #d1d5db;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 1px #cbd5e1;
+        }
+
+        .timeline-date {
+            color: var(--muted);
+            font-size: .95rem;
+            font-weight: 600;
+        }
+
+        .timeline-item h3 {
+            margin: 3px 0;
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+
+        .timeline-company {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .contact-box {
+            text-align: center;
+            background: var(--dark);
+            color: white;
+            padding: 55px 30px;
+            border-radius: 16px;
+        }
+
+        .contact-box h2 {
+            margin: 0 0 12px;
+            font-size: 2rem;
+        }
+
+        .contact-box p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #cbd5e1;
+        }
+
+        .contact-box .button-secondary {
+            border-color: #64748b;
+            color: white;
+            background: transparent;
+        }
+
+        footer {
+            padding: 35px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        @media (max-width: 900px) {
+            .capabilities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                min-height: 64px;
+            }
+
+            .nav-links a:not(.nav-resume) {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0 65px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .capabilities,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="brand" href="/">Bill O'Dell</a>
+
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-resume" href="resume.html">Resume</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Software Engineer & Enterprise Solutions Architect
+                </div>
+
+                <h1>
+                    I build systems that solve real operational problems.
+                </h1>
+
+                <h2>
+                    Enterprise applications, integrations, automation and data solutions.
+                </h2>
+
+                <p>
+                    Software engineer and system architect with 15+ years of experience
+                    designing and delivering business-critical applications, distributed
+                    integrations, automation, and data-driven solutions. I specialize in
+                    turning complex manual processes and disconnected enterprise systems
+                    into reliable, maintainable software.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="button button-primary">
+                        View Featured Projects
+                    </a>
+
+                    <a href="resume.html" class="button button-secondary">
+                        View Resume
+                    </a>
+                </div>
+
+                <div class="tech-line">
+                    C# &bull; .NET &bull; ASP.NET Core &bull; Oracle &bull; Vue &bull;
+                    REST APIs &bull; AWS &bull; Enterprise Integration
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>What I Build</h2>
+                <p>
+                    My work focuses on practical software engineering: connecting systems,
+                    automating business processes, improving reliability, and giving users
+                    better tools to do their jobs.
+                </p>
+            </div>
+
+            <div class="capabilities">
+
+                <div class="capability">
+                    <h3>Enterprise Applications</h3>
+                    <p>
+                        Full-stack business applications using .NET, Vue, Oracle and modern
+                        web technologies.
+                    </p>
+                </div>
+
+                <div class="capability">
+                    <h3>Systems Integration</h3>
+                    <p>
+                        REST APIs, enterprise platforms, authentication, background services
+                        and distributed workflows.
+                    </p>
+                </div>
+
+                <div class="capability">
+                    <h3>Automation</h3>
+                    <p>
+                        Replacing repetitive manual processes with reliable software-driven
+                        workflows and scheduled services.
+                    </p>
+                </div>
+
+                <div class="capability">
+                    <h3>Data & Analytics</h3>
+                    <p>
+                        Oracle and SQL solutions supporting reporting, validation,
+                        reconciliation and operational decision-making.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-alt">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Featured Projects</h2>
+                <p>
+                    Selected examples of systems and integrations I have designed and delivered.
+                    Project descriptions are intentionally generalized to protect proprietary
+                    and operational information.
+                </p>
+            </div>
+
+            <div class="projects">
+
+                <article class="project-card">
+                    <div class="project-label">Application Development</div>
+
+                    <h3>Enterprise Badging Platform</h3>
+
+                    <div class="project-tech">
+                        C# &bull; .NET &bull; ASP.NET Core MVC &bull; Vue &bull; Oracle
+                    </div>
+
+                    <p>
+                        Designed and developed an internal application that integrated
+                        personnel information, authorization data, photography, badge
+                        hardware, printer selection and workstation services into a
+                        unified operational workflow.
+                    </p>
+
+                    <div class="impact">
+                        <strong>Business impact:</strong>
+                        Replaced the need for an approximately $45,000 vendor solution.
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-label">Automation & Integration</div>
+
+                    <h3>Training & Authorization Automation</h3>
+
+                    <div class="project-tech">
+                        C# &bull; REST APIs &bull; Oracle &bull; Enterprise Learning Systems
+                    </div>
+
+                    <p>
+                        Built automated training verification across multiple learning
+                        platforms and integrated completion data into personnel authorization
+                        workflows, replacing a manual validation process.
+                    </p>
+
+                    <div class="impact">
+                        <strong>Business impact:</strong>
+                        Reduced approximately five minutes of manual review per individual
+                        across 800+ outage personnel.
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-label">Enterprise Integration</div>
+
+                    <h3>Personnel Systems Integration</h3>
+
+                    <div class="project-tech">
+                        C# &bull; Oracle &bull; REST APIs &bull; Background Services
+                    </div>
+
+                    <p>
+                        Developed bidirectional integrations between HR, contractor and
+                        operational systems to automate onboarding, personnel validation,
+                        authorization status and eligibility information.
+                    </p>
+
+                    <div class="impact">
+                        <strong>Business impact:</strong>
+                        Eliminated approximately ten minutes of manual processing per person
+                        during high-volume onboarding periods.
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-label">Reporting & Operations</div>
+
+                    <h3>Operational Reporting Platform</h3>
+
+                    <div class="project-tech">
+                        ASP.NET Core &bull; Vue &bull; Oracle &bull; Excel/PDF Reporting
+                    </div>
+
+                    <p>
+                        Consolidated multiple operational reports into a centralized,
+                        parameter-driven reporting application with dynamic filtering,
+                        role-based access and export functionality.
+                    </p>
+
+                    <div class="impact">
+                        <strong>Business impact:</strong>
+                        Reduced fragmented reporting workflows and provided users with a
+                        centralized self-service reporting experience.
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Technical Skills</h2>
+                <p>
+                    Technologies I use to design, build, integrate and support production systems.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-group">
+                    <h3>Application Development</h3>
+                    <p>
+                        C#, .NET 10, ASP.NET Core MVC, Razor, Vue 3, JavaScript,
+                        HTML5, CSS, LINQ, AJAX, jQuery, Bootstrap and WebForms.
+                    </p>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Data & Databases</h3>
+                    <p>
+                        Oracle, SQL, PL/SQL, SQL Server, reporting, data validation,
+                        reconciliation and operational analytics.
+                    </p>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Integration & Automation</h3>
+                    <p>
+                        REST APIs, OData, JSON, XML, SAML/token authentication,
+                        background services, scheduled processing and enterprise integration.
+                    </p>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>
+                        AWS, IIS, application deployment, server configuration,
+                        distributed application environments, logging and production support.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-alt">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Experience</h2>
+                <p>
+                    More than fifteen years developing and supporting enterprise systems
+                    in complex, highly regulated operating environments.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-date">March 2025 - Present</div>
+                    <h3>Nuclear Security Database Administrator</h3>
+                    <div class="timeline-company">
+                        Vistra — Comanche Peak Nuclear Power Plant
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">April 2020 - March 2025</div>
+                    <h3>Developer IV</h3>
+                    <div class="timeline-company">
+                        Vistra — Comanche Peak Nuclear Power Plant
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">February 2016 - April 2020</div>
+                    <h3>Business & Integration Architecture Specialist</h3>
+                    <div class="timeline-company">
+                        Accenture — Comanche Peak Nuclear Power Plant
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">September 2010 - February 2016</div>
+                    <h3>Application Analyst / Developer</h3>
+                    <div class="timeline-company">
+                        Capgemini — Comanche Peak Nuclear Power Plant
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 35px;">
+                <a href="resume.html" class="button button-secondary">
+                    View Full Professional Experience
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>Let's Build Something Useful</h2>
+
+                <p>
+                    I'm interested in software engineering, enterprise architecture,
+                    integration and automation opportunities where technology can solve
+                    meaningful operational problems.
+                </p>
+
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="mailto:billodell2012@gmail.com"
+                       class="button button-primary">
+                        Email Me
+                    </a>
+
+                    <a href="resume.html"
+                       class="button button-secondary">
+                        View Resume
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        &copy; 2026 Bill O'Dell
+    </div>
+</footer>
+
+</body>
+
+</html>
